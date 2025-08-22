@@ -1,0 +1,183 @@
+import tsParser from "@typescript-eslint/parser";
+
+export default {
+  files: ["**/*.ts", "**/*.tsx"],
+  languageOptions: {
+    parserOptions: {
+      parser: tsParser,
+      requireConfigFile: false,
+      ecmaFeatures: {
+        jsx: true,
+      },
+      project: ["./tsconfig.json"],
+    },
+  },
+  rules: {
+    "@typescript-eslint/adjacent-overload-signatures": "error",
+    "@typescript-eslint/ban-ts-comment": "error",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-array-constructor": "error",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-empty-object-type": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-extra-non-null-assertion": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/no-loss-of-precision": "error",
+    "@typescript-eslint/no-misused-new": "error",
+    "@typescript-eslint/no-namespace": "error",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
+    "@typescript-eslint/no-this-alias": "error",
+    "@typescript-eslint/no-unnecessary-type-constraint": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/prefer-as-const": "error",
+    "@typescript-eslint/prefer-namespace-keyword": "error",
+    "@typescript-eslint/triple-slash-reference": "error",
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        default: "generic",
+      },
+    ],
+    "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/consistent-type-assertions": [
+      "error",
+      {
+        assertionStyle: "as",
+      },
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        accessibility: "no-public",
+      },
+    ],
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        default: [
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method",
+          "signature",
+        ],
+      },
+    ],
+    "@typescript-eslint/method-signature-style": ["error", "property"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        format: ["camelCase", "PascalCase"],
+        selector: "default",
+      },
+      {
+        format: ["PascalCase"],
+        selector: "typeLike",
+      },
+      {
+        format: ["PascalCase", "UPPER_CASE"],
+        selector: "enumMember",
+      },
+      {
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+        selector: "method",
+      },
+      {
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+        selector: "parameter",
+      },
+      {
+        format: ["camelCase", "PascalCase"],
+        leadingUnderscore: "allow",
+        selector: "variable",
+      },
+      {
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+        modifiers: ["const"],
+        leadingUnderscore: "allow",
+        selector: "variable",
+      },
+      {
+        format: null,
+        selector: "classProperty",
+      },
+      {
+        format: null,
+        selector: "objectLiteralProperty",
+      },
+      {
+        format: null,
+        selector: "typeProperty",
+      },
+      {
+        selector: "interface",
+        format: ["PascalCase"],
+      },
+    ],
+    "@typescript-eslint/no-confusing-void-expression": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-for-in-array": "error",
+    "@typescript-eslint/no-redeclare": "error",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+    "@typescript-eslint/no-unnecessary-type-assertion": "error",
+    "@typescript-eslint/no-unused-expressions": "error",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        classes: true,
+        enums: true,
+        functions: false,
+        typedefs: true,
+        variables: true,
+      },
+    ],
+    "@typescript-eslint/no-useless-constructor": "error",
+    "@typescript-eslint/non-nullable-type-assertion-style": "error",
+    "@typescript-eslint/prefer-enum-initializers": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/prefer-function-type": "error",
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/restrict-plus-operands": "error",
+    "@typescript-eslint/unbound-method": [
+      "error",
+      {
+        ignoreStatic: true,
+      },
+    ],
+    "@typescript-eslint/unified-signatures": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        args: "all",
+        argsIgnorePattern: "^_",
+        caughtErrors: "all",
+        caughtErrorsIgnorePattern: "^_",
+        destructuredArrayIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+      },
+    ],
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-extraneous-class": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+  },
+};

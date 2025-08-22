@@ -22,14 +22,14 @@ pnpm i --save-dev @reacture-io/eslint-config
 
 ```javascript
 // eslint.config.js
-import baseConfig from '@faktion-com/eslint-config/base';
+import baseConfig from '@reacture-io/eslint-config/base';
 export default baseConfig;
 
 // For React
-import reactConfig from '@faktion-com/eslint-config/react';
+import reactConfig from '@reacture-io/eslint-config/react';
 export default reactConfig;
 
 // For Node.js
-import nodeConfig from '@faktion-com/eslint-config/node';
+import nodeConfig from '@reacture-io/eslint-config/node';
 export default nodeConfig;
 ```
