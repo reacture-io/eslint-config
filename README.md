@@ -1,5 +1,7 @@
 # @reacture-io/eslint-config
 
+by [reacture](https://www.reacture.io/)
+
 A collection of eslint configuration files for consistent development across Reacture
 
 ## Overview
